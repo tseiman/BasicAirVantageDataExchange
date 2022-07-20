@@ -26,6 +26,6 @@ bindings:
 
 
 start: manual
-sandboxed: false
+sandboxed: true
 version: 2.0
 
