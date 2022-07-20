@@ -9,6 +9,7 @@ https://docs.legato.io/latest/confLeaf.html
 ### setup a leaf workspace
 Setup the leaf workspace
 *NOTE* that you may build for wp77xx - in that case substitute wp76xx by wp77xx)
+*NOTE 2*: substitute swi-wp76_5.0.0 with the latest version given by leaf search
 
 ```
 cd BasicAirVantageDataExchange
