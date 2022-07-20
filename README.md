@@ -26,3 +26,26 @@ or in case of WP77
 ```
 make wp77xx
 ```
+### install app
+```
+instapp basicAirVantageDataExchangeComponent.wp76xx.update 192.168.2.2
+```
+or 
+```
+instapp basicAirVantageDataExchangeComponent.wp77xx.update 192.168.2.2
+```
+### run
+**Note** the application is not auto starting. This ihas a clear reason as the default intervals are set pretty narrow so the device communicates a lot. Therefore the applicaiotn must be started manually:
+```
+ssh 192.168.2.2 -l root
+app start basicAirVantageDataExchangeComponent
+```
+and to stop
+```
+app stop basicAirVantageDataExchangeComponent
+```
+you might want to follow the debug output (good way is to open a second console and ssh the WP device):
+```
+logread -f
+```
+
