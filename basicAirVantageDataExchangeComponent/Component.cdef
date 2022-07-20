@@ -1,0 +1,15 @@
+sources:
+{
+    main.c
+    AVSInterface.c
+}
+
+requires:
+{
+    api:
+    {
+	le_avdata = le_avdata.api
+    modemServices/le_info.api
+    //    $CURDIR/../mqttCliSvr.api
+    }
+}

@@ -1,0 +1,31 @@
+
+executables:
+{
+    basicAvData = ( basicAirVantageDataExchangeComponent )
+}
+
+processes:
+{
+    envVars:
+    {
+	LE_LOG_LEVEL = DEBUG
+    }
+    run:
+    {
+        (basicAvData)
+    }
+    faultAction: restart
+}
+
+bindings:
+{
+ //   basicAvData.basicAirVantageDataExchangeComponent.le_data -> dataConnectionService.le_data
+    basicAvData.basicAirVantageDataExchangeComponent.le_avdata -> avcService.le_avdata
+    basicAvData.basicAirVantageDataExchangeComponent.le_info -> modemService.le_info
+}
+
+
+start: manual
+sandboxed: false
+version: 2.0
+
