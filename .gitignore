@@ -2,3 +2,5 @@ _build*
 *.update
 leaf-data
 leaf-workspace.json
+*.zip
+*.app

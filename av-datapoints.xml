@@ -1,0 +1,7 @@
+<asset default-label="avsDemo" id="avsDemo">
+
+	<variable default-label="Device IMEI" path="imei" type="string"/>
+	<variable default-label="Demo Variable" path="demovalue" type="int"/>
+	<command default-label="Send Demo Command" path="democommand"/>
+
+</asset>
