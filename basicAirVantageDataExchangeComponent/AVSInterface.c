@@ -132,6 +132,13 @@ static void avsService_executeCommandCallback(const char* path,
                                                 le_avdata_AccessType_t accessType,
                                                         le_avdata_ArgumentListRef_t argumentList,
                                                                 void* contextPtr) {
+
+        le_avdata_ReplyExecResult(argumentList, LE_OK);                         // feeding back to AirVantage that the Command 
+                                                                                // was executet - here a better handler than just 
+                                                                                // LE_OK would be good in a real application
+                                                                                // if le_avdata_ReplyExecResult() is not send 
+                                                                                // AV will repeat until the command is ACKed
+
         if(cmdCallback == NULL) {
                 LE_WARN("No command callback set - got command \"%s\" - but unable to execute", path);
                 return;
