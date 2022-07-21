@@ -34,6 +34,19 @@ or
 ```
 instapp basicAirVantageDataExchangeComponent.wp77xx.update 192.168.2.2
 ```
+To create a valid Airvantage package with a **manifest.app** file it requires to have some tools installed:
+```
+sudo apt-get install libxml2-utils xmlstarlet zip unzip
+```
+To build the package run:
+```
+make pack_wp76xx
+```
+or in case of WP77
+```
+make pack_wp77xx
+```
+
 ### run
 **Note** the application is not auto starting. This ihas a clear reason as the default intervals are set pretty narrow so the device communicates a lot. Therefore the applicaiotn must be started manually:
 ```
